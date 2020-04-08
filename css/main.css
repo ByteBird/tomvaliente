@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Lobster|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Titan+One&display=swap');
+
+/* 
+font-family: 'Montserrat', sans-serif;
+font-family: 'Lato', sans-serif;
+font-family: 'Lobster', cursive;
+font-family: 'Titan One', cursive; 
+*/
+
+html, body, div, span, applet, object,
+iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite,
+code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b,
+u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby,
+section{
+	margin: 0;
+	padding: 0;
+    font: inherit;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, img{
+    display: block;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Basics Styles*/
+
+html, *, *:before, *:after {
+	box-sizing: border-box;
+}
+
+body{
+    -webkit-text-size-adjust: none;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar{
+    width: 7px;
+    background: rgba(255,255,255,0.0);
+}
+
+body::-webkit-scrollbar-thumb{
+    background: rgba(255,255,255,0.8);
+    border-radius: 5px;
+}
+
+input{
+    display: none;
+}
+
+.nav-bar{
+    position: fixed;
+    z-index: 100;
+    width: 210px;
+    height: 100%;
+    top: 0;
+    left: -210px;
+    background: #333;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    overflow-y: auto;
+}
+
+.nav-list p{
+    line-height: 1.5;
+    color: #666;
+}
+
+.nav-list img{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 94%;
+    border-radius: 7px;
+}
+
+#burger:checked ~ .conteiner .nav-bar{
+    left: 0px;
+    box-shadow:  0 0 35px #000;
+}
+
+.menu-title{
+    font-size: 1.2em;
+    width: 100px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.nav-list{
+    padding: 15px 15px;
+}
+
+.list-items{
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #444;
+}
+
+.list-items:last-child{
+    margin-bottom: 0;
+}
+
+.list-items a{
+    transition-duration: .2s;
+    transition-property: color;
+}
+
+.list-items a:hover{
+    color: #666;
+}
+
+.list-items a i{
+    margin-right: 10px;
+    float: right;
+}
+
+label{
+    cursor: pointer;
+    position: fixed;
+    display: flex;
+    left: 0px;
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    background: tomato;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    z-index: 200;
+}
+
+.icon-menu{
+    font-size: 1.3em;
+}
+
+#burger:checked ~ label{
+    left: 160px;
+    transform: rotateZ(90deg);
+}
+
+.header-conteiner{
+    height: 50px;
+}
+
+.title{
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    text-align: center;
+    line-height: 2.6;
+    height: 50px;
+    background: #222;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+
+}
+.title img{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+}
+
+.section-h2{
+    width: 100%;
+    text-align: center;
+    padding: 20px 15px;
+    font-weight: 700;
+    line-height: 3;
+    color: #eee;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: #111;
+}
+
+.section span{
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(34, 138, 123);
+    background: yellow;
+    line-height: 2.4;
+}
+
+.section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #333;
+}
+
+.article{
+
+    padding: 20px 20px 40px 20px;
+    background: #222;
+    box-shadow: 0 15px 15px -10px #222,
+                inset 0 0 35px #111;;
+                
+}
+
+@media only screen and (min-width: 600px){
+    .article{
+        max-width: 400px;
+        margin: 20px;
+        border-radius: 10px;
+    }
+}
+
+.article:nth-of-type(even){
+    background: #333;
+    
+}
+
+.article-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+    height: 40px;
+    background: tomato;
+    border-radius: 5px;
+    transition-duration: 0.2s;
+    transition-property: background transform;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.article-h3{
+    text-align: center;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #eee;
+    font-weight: 200;
+
+}
+
+.article strong{
+    color: rgb(214, 214, 214);
+}
+
+.article-p{
+    line-height: 1.4;
+    color: #888;
+    font-weight: 300;
+    margin-bottom: 40px;
+    text-align: justify;
+}
+
+.article-figure{
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.2s;
+    transition-property: transform;
+}
+
+.article-figure img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+
