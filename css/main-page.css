@@ -1,8 +1,0 @@
-.main-page{
-    display: flex;
-    overflow-x: scroll;
-}
-.series{
-    width: 400px;
-    background: red;
-}
